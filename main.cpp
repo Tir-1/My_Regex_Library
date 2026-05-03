@@ -58,8 +58,3 @@ int main() {
     cout << result.get_success() << endl;
     return 0;
 }
-
-
-//(((eps)|((eps)(eps)))|(((a)|((eps)(a)))|(((a)|((eps)(a)))(eps|a)...(eps|a))))|(((b)|((eps)(b)))|(((b)|((eps)(b)))(eps|b)...(eps|b)))
-//(((eps)|())|(((a)|())|((((a)|())((eps|a)...))(eps|a))))|(((b)|())|((((b)|())((eps|b)...))(eps|b)))
-((eps)|(a|(a((eps|a)...))(eps|a)))|(b|(b((eps|b)...))(eps|b))
