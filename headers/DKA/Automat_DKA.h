@@ -7,7 +7,7 @@
 #include <unordered_map>
 #include <vector>
 #include <string>
-
+#include <set>
 #include <string_view>
 using std::vector, std::string;
 struct State {
@@ -26,6 +26,7 @@ struct DTO_DKA {
 struct  Automat_DKA {
     vector<State> states;
     int start_state=0;
+    std::set<char> alphabet;
 
     DTO_DKA find_pref(std::string_view text, size_t start = 0)const  {
         DTO_DKA dto;

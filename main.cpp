@@ -45,12 +45,14 @@ int main() {
     string r19 = "(a...)";
     string r20 = "(a|)...b";
     string text20 = "b";
-    auto pat = compile(r18);
+    auto pat = compile("");
     bool flag;
     auto at = pat.save_DKA(flag);
     string gh = recover_reg(at);
     cout << gh << endl;
     Output_reg result =pat.search(text15);
+    auto jk = search("", "sdfd");
+    auto jk2 = search("(<name>)", "mephi");
     for (auto& i : result) {
         cout << i << endl;
     }
@@ -58,8 +60,3 @@ int main() {
     cout << result.get_success() << endl;
     return 0;
 }
-
-
-//(((eps)|((eps)(eps)))|(((a)|((eps)(a)))|(((a)|((eps)(a)))(eps|a)...(eps|a))))|(((b)|((eps)(b)))|(((b)|((eps)(b)))(eps|b)...(eps|b)))
-//(((eps)|())|(((a)|())|((((a)|())((eps|a)...))(eps|a))))|(((b)|())|((((b)|())((eps|b)...))(eps|b)))
-((eps)|(a|(a((eps|a)...))(eps|a)))|(b|(b((eps|b)...))(eps|b))

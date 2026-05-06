@@ -25,6 +25,7 @@ add_library(regex_lib STATIC
         src/Automat_NKA.cpp
         src/Builder_NKA.cpp
         src/Builder_DKA.cpp
+        src/binary_operations.cpp
 )
 
 add_executable(main_reg main.cpp)

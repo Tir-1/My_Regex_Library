@@ -11,6 +11,6 @@
 #include  <unordered_map>
 
 #include "Builder_DKA.h"
-Automat_DKA min_dka(const Automat_DKA& DKA, const set<char>& alphabet);
+Automat_DKA min_dka(const Automat_DKA& DKA);
 
 #endif //REGEXLIBRARY_MIN_DKA_H

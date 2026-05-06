@@ -16,8 +16,10 @@ int find(const vector<stG>& P, int state_id) {
     return -1;
 }
 
-Automat_DKA min_dka(const Automat_DKA& DKA, const set<char>& alphabet) {
+Automat_DKA min_dka(const Automat_DKA& DKA) {
+    set<char> alphabet = DKA.alphabet;
     Automat_DKA minDKA;
+    set<char> new_alphabet;
     stG G1{0};
     stG G2{1};
     vector<stG> P;
@@ -43,6 +45,7 @@ Automat_DKA min_dka(const Automat_DKA& DKA, const set<char>& alphabet) {
                     int id = -1;
                     if (state.next.find(c) != state.next.end()) {
                         id = state.next[c];
+                        new_alphabet.insert(c);
                     }
 
                     int id_G = find(P, id);
@@ -95,7 +98,7 @@ Automat_DKA min_dka(const Automat_DKA& DKA, const set<char>& alphabet) {
         }
         minDKA.states.push_back(state);
     }
-
+    minDKA.alphabet = new_alphabet;
     return minDKA;
 
 }

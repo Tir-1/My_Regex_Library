@@ -73,6 +73,7 @@ Automat_DKA Builder_DKA::make_DKA(unique_ptr<Node> root) {
         dfa_s.next = perexod;
         DKA.states.push_back(dfa_s);
     }
+    DKA.alphabet = alphabet;
     return DKA;
 }
 

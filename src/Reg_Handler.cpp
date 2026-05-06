@@ -14,7 +14,7 @@ optional<Pattern> Reg_Handler::work() {
     }
     else {
         Automat_DKA DKA = builder_AST.make_DKA(root->clone());
-        DKA = min_dka(DKA, builder_AST.get_alphabet());
+        DKA = min_dka(DKA);
         pattern.set_DKA(DKA);
     }
     return pattern;
